@@ -1,4 +1,4 @@
-/* Tartan1 */
+/* General reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,60 +6,48 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
   color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   max-width: 1200px;
+  padding: 20px;
 }
 
+/* Header Styles */
 header {
-  background-image: url('https://imagedelivery.net/8ZT_4LeVt4n626XtMTH2xw/e315a87c-f2bc-4449-2296-186bf0d8c300/public'); /* tartan1 image */
+  background-image: url('https://imagedelivery.net/8ZT_4LeVt4n626XtMTH2xw/e315a87c-f2bc-4449-2296-186bf0d8c300/public'); /* tartan image*/
   background-size: cover;
   background-position: center;
-  padding: 60px 0;
+  padding: 80px 0;
   text-align: center;
   color: white;
   position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid #28a745;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-@media (min-width: 768px) {
-  img {
-    width: 50%; /* Adjust size for tablets and larger screens */
-  }
-}
-
-@media (min-width: 1025px) {
-  h1 {
-    font-size: 4rem;  /* Use a fixed size for larger screens */
-  }
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
+/* Header Text */
 header h1 {
   font-size: 6vw;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
+  padding: 0 10px;
 }
 
+/* Navigation Styles */
 nav ul {
   list-style: none;
-  margin-top: 15px;
+  margin-top: 20px;
+  padding: 0;
 }
 
 nav ul li {
@@ -73,45 +61,54 @@ nav ul li a {
   font-weight: bold;
   font-size: 1.2em;
   transition: color 0.3s ease;
+  padding: 5px 10px;
 }
 
 nav ul li a:hover {
-  color: #28a745; /* Irish green on hover */
+  color: #28a745;
+  background-color: rgba(255, 255, 255, 0.3); /* Add subtle hover effect */
+  border-radius: 5px;
 }
 
+/* Section Styles */
 section {
   padding: 40px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-radius: 8px;
 }
 
+/* Section Heading */
 h2 {
   color: #28a745;
   font-size: 2.5em;
   margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
 }
 
-ul {
-  list-style: none;
-}
-
-ul li {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 form label {
   font-weight: bold;
-  margin: 10px 0 5px;
+  margin-bottom: 8px;
 }
 
 form input, form textarea {
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
-  font-size: 1em;
+  font-size: 1.1em;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -125,16 +122,105 @@ form button {
   font-size: 1.1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 form button:hover {
   background-color: #218838;
 }
 
+/* Footer Styles */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 15px 0;
+  padding: 20px 0;
   font-size: 1em;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Image Responsiveness */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Breakpoints */
+
+/* Mobile-first design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 8vw;  /* Slightly larger text for mobile */
+    padding: 0 10px;
+  }
+
+  nav ul {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  section {
+    padding: 20px 0;
+  }
+
+  h2 {
+    font-size: 2rem;  /* Adjust font size for smaller screens */
+  }
+
+  form input, form textarea {
+    font-size: 1rem;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet devices (between 768px and 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 7vw;  /* Adjust for tablets */
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Desktop devices (larger than 1024px) */
+@media (min-width: 1025px) {
+  header h1 {
+    font-size: 4rem;  /* Use a fixed size for larger screens */
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  h2 {
+    font-size: 2.5rem;  /* Larger heading size for desktop */
+  }
+
+  form input, form textarea {
+    font-size: 1.2rem;
+  }
+
+  form button {
+    font-size: 1.2rem;
+  }
 }
