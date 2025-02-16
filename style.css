@@ -17,6 +17,27 @@ body {
   max-width: 1200px;
 }
 
+.container1 {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Make the image responsive */
+.responsive-img {
+  width: 100%;      /* Makes the image take up 100% of the container width */
+  height: auto;     /* Maintain aspect ratio */
+  max-width: 100%;  /* Prevents the image from exceeding the container's width */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .responsive-img {
+    width: 90%;  /* Resize to 90% of the container width on smaller screens */
+    margin: 0 auto; /* Center image horizontally */
+  }
+}
+
 header {
   background-image: url('https://imagedelivery.net/8ZT_4LeVt4n626XtMTH2xw/e315a87c-f2bc-4449-2296-186bf0d8c300/public'); /* Replace with a path to your tartan image */
   background-size: cover;
