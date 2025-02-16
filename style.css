@@ -11,6 +11,17 @@ body {
   color: #333;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  img {
+    width: 50%; /* Adjust size for tablets and larger screens */
+  }
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
