@@ -1,4 +1,4 @@
-/* tartan2mobile*/
+/* Tartan1 */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -17,29 +17,8 @@ body {
   max-width: 1200px;
 }
 
-.container1 {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* Make the image responsive */
-.responsive-img {
-  width: 100%;      /* Makes the image take up 100% of the container width */
-  height: auto;     /* Maintain aspect ratio */
-  max-width: 100%;  /* Prevents the image from exceeding the container's width */
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-  .responsive-img {
-    width: 90%;  /* Resize to 90% of the container width on smaller screens */
-    margin: 0 auto; /* Center image horizontally */
-  }
-}
-
 header {
-  background-image: url('https://imagedelivery.net/8ZT_4LeVt4n626XtMTH2xw/e315a87c-f2bc-4449-2296-186bf0d8c300/public'); /*tartan image */
+  background-image: url('https://imagedelivery.net/8ZT_4LeVt4n626XtMTH2xw/e315a87c-f2bc-4449-2296-186bf0d8c300/public'); /* tartan1 image */
   background-size: cover;
   background-position: center;
   padding: 60px 0;
@@ -48,13 +27,28 @@ header {
   position: relative;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  img {
+    width: 50%; /* Adjust size for tablets and larger screens */
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 header h1 {
-  font-size: 4vw; /* Dynamic font size based on viewport width */
+  font-size: 3em;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
-  position: relative;
-  line-height: 1.2;
 }
 
 nav ul {
@@ -71,7 +65,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   transition: color 0.3s ease;
 }
 
@@ -84,10 +78,9 @@ section {
 }
 
 h2 {
-  font-size: 2.5rem; /* Larger font size for headings */
   color: #28a745;
+  font-size: 2.5em;
   margin-bottom: 20px;
-  line-height: 1.4;
 }
 
 ul {
@@ -95,7 +88,7 @@ ul {
 }
 
 ul li {
-  font-size: 1.1rem;
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
@@ -112,7 +105,7 @@ form label {
 form input, form textarea {
   padding: 10px;
   margin-bottom: 15px;
-  font-size: 1rem;
+  font-size: 1em;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -123,7 +116,7 @@ form button {
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -137,64 +130,5 @@ footer {
   color: white;
   text-align: center;
   padding: 15px 0;
-  font-size: 1rem;
-}
-
-/* Mobile-first styles (default for small screens) */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 6vw; /* Larger on mobile */
-    line-height: 1.2;
-  }
-
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  nav ul li a {
-    font-size: 1.1rem;
-  }
-
-  h2 {
-    font-size: 2rem; /* Slightly smaller on mobile */
-  }
-
-  form input, form textarea {
-    font-size: 1rem;
-  }
-
-  footer {
-    font-size: 1rem;
-  }
-}
-
-/* Tablet and larger screens */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header h1 {
-    font-size: 5vw; /* Smaller than on mobile but still responsive */
-  }
-
-  h2 {
-    font-size: 2.3rem; /* Adjusted heading font size */
-  }
-}
-
-/* Desktop */
-@media (min-width: 1025px) {
-  header h1 {
-    font-size: 3.5rem; /* Fixed size on larger screens */
-  }
-
-  h2 {
-    font-size: 2.5rem; /* Larger headings on desktop */
-  }
-
-  nav ul li a {
-    font-size: 1.2rem; /* Maintain consistency */
-  }
-
-  footer {
-    font-size: 1.2rem;
-  }
+  font-size: 1em;
 }
