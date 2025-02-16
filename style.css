@@ -32,7 +32,11 @@ header {
   background-color: #28a745; /* Irish green */
   padding: 20px 0;
   text-align: center;
+  width: 100%; /* Ensures it spans the full width */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+  margin: 0; /* Ensures no extra margin is applied */
 }
+
 
 header h1 {
   color: white;
